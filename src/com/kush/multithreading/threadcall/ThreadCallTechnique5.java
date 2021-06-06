@@ -1,0 +1,28 @@
+package com.kush.multithreading.threadcall;
+
+import java.util.concurrent.TimeUnit;
+
+public class ThreadCallTechnique5 {
+// Anonyms way is basically used to handles UI events.
+	public static void main(String[] args) {
+		System.out.println("Main thread starts here..");
+	Thread t=	new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				for (int i = 10; i >= 1; i--) {
+					System.out.println(" Tic- tic " + i);
+					try {
+						TimeUnit.MILLISECONDS.sleep(250);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		});
+	t.start();
+		System.out.println("Main thread ends here..");
+	}
+
+}
+

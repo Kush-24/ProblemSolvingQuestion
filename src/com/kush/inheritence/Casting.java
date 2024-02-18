@@ -1,7 +1,7 @@
 package com.kush.inheritence;
 /*
  * Casting is the process of making a variable behaves as a variable of another type.
- * Casting an object from a sub class to a super class doesn’t require an explicit cast.(automatically done by the compiler)
+ * Casting an object from a sub class to a super class doesnï¿½t require an explicit cast.(automatically done by the compiler)
  * Casting an object from a super class to a sub class requires an explicit cast.
  */
 

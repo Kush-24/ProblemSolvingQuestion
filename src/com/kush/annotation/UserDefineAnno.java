@@ -37,9 +37,7 @@ class NokiaSeries{
 public class UserDefineAnno {
 		public static void main(String[] args) {
 			NokiaSeries n=new NokiaSeries("7 Pro", 7);
-			
-			Class c=n.getClass();
-			Annotation an=c.getAnnotation(SmartPhones.class);
+			Annotation an=n.getClass().getAnnotation(SmartPhones.class);
 			SmartPhones s=(SmartPhones) an;
 			
 			System.out.println(s.os()+"  "+s.version());

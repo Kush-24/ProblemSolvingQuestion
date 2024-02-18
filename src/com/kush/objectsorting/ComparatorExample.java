@@ -4,6 +4,15 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/*
+ * When to use what ? 
+> Use Comparable when you want to define the natural ordering of objects within the class itself.
+ 
+> Use Comparator when you want to define different ways of comparing objects or when you can't
+modify the class whose objects you want to compare. It's useful for implementing sorting in 
+various contexts or for sorting objects based on multiple criteria.
+*/
+
 class Employee{
 
 	public Employee(int empId, int income, int age, String name) {
@@ -76,15 +85,14 @@ class sortBasedOnAge implements Comparator<Employee> {
 	}
 }
 
-/*
-class sortBasedOnName implements Comparator<Employee> {
 
+class sortBasedOnName implements Comparator<Employee> {
 	@Override
 	public int compare(Employee o1, Employee o2) {
 		return o1.getName().compareTo(o2.getName());
 	}
 
-}*/
+}
 
 public class ComparatorExample {
 	static List<Employee> list;
@@ -111,7 +119,6 @@ public class ComparatorExample {
 		list.forEach(emp-> System.out.println(emp));
 		
 		System.out.println("sorting based on income with lambda expression --->");
-		
 		list=EmployeeUtil.getEmployeeData();
 		Collections.sort(list,(a,b)-> a.getIncome() - b.getIncome());
 		list.forEach(System.out::println);
@@ -127,7 +134,6 @@ public class ComparatorExample {
 		System.out.println("sorting wrt Income and names:");
 		list=EmployeeUtil.getEmployeeData();
 		list.sort(Comparator.comparing(Employee::getIncome).thenComparing(Employee::getName));
-		
 		list.forEach(emp-> System.out.println(emp));
 		
 	}

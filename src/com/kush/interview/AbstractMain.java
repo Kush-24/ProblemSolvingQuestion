@@ -16,27 +16,26 @@ abstract class AbstractClass {
 		// Abstract class can contain constructor
 		//1.The main purpose of the constructor is to initialize the newly created object.
 		//2.it is used for super calls for initialization events common to all the subclasses.
-		//3.Also, even if we don’t provide any const the compiler will add default const.
+		//3.Also, even if we donï¿½t provide any const the compiler will add default const.
 		//4.An abstract class can be inherited by any number of sub-classes,
 		//thus functionality of constructor present in abstract class can be used by them.
 	}
-	/*
+	
 	public static void main(String[] args) {
 		System.out.println("Main method");
 		AbstractClass.one(); // printing static meth
-	}*/
+	}
 }
 
 public class AbstractMain extends AbstractClass{
 	public AbstractMain() {
-		//super(); for calling abstract contructor content.
+		//super();// for calling abstract constructor content.
 		System.out.println("kush constructor..");
 	}
 	public static void main(String[] args) {
 		AbstractMain k=new AbstractMain();
 		k.show();
 		k.show2();
-		
 	}
 
 	@Override

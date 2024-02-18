@@ -1,7 +1,7 @@
 package com.kush.inheritence;
 
 /* This is called Dynamic binding.
- * In Dynamic binding compiler doesn’t decide the method to be called. 
+ * In Dynamic binding compiler doesnï¿½t decide the method to be called. 
  * Overriding is a perfect example of dynamic binding.
  */
 
@@ -24,7 +24,7 @@ public class Child1 extends Parent {
 	}
 	public static void main(String[] args) {
 		Parent p=new Child1();
-		p.show();
+		p.show(); 
 		Child1 c=new Child1();
 		c.show();
 		System.out.println(p.a+ " "+c.a);

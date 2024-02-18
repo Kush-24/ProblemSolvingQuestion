@@ -33,5 +33,8 @@ public static void main(String[] args) {
 // We can directly add that consumer class object in foreach()
 	list.forEach(a->System.out.print(a+" "));
 	
+	
+	
+	
 }
 }

@@ -29,8 +29,9 @@ public class Main extends Abstract{
 	public static void main(String[] args) {
 		Main obj=new Main();
 		obj.show();
-		//obj.print(); it'll show warning.
+		//obj.print(); it'll show warning bcz for static method object is not required
 		Abstract.print();
+		Main.print();
 		System.out.println(obj.a+" "+obj.b+" "+obj.c);
 	}
 }

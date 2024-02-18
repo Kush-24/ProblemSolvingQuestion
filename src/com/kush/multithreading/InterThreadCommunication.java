@@ -36,7 +36,7 @@ class Consumer extends Thread{
 			System.out.println(prod.sb); // consuming..
 			try {
 				System.out.print("waiting for producer object..");
-				prod.wait();
+				prod.sb.wait();
 			} catch (Exception e) {
 				 e.printStackTrace();
 			}
@@ -51,7 +51,15 @@ public class InterThreadCommunication {
 		
 		prod.start();
 		cons.start();
-
+		
+		try {
+	        prod.join();
+	        cons.join();
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+	    System.out.println("Producer and Consumer threads have completed.");
+		
 	}
 
 }

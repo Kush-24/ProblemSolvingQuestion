@@ -14,6 +14,16 @@ public class Child5 extends Parent5 {
     final void show() {
 		System.out.println("Child5 show..");
 	}
+  
+    /*
+     *  you cannot overload a method in Java solely by changing the return type. 
+     *  Overloading in Java is based on the method signature,
+     *   which includes the method name and the parameter types, but not the return type.
+        
+     * public int show() {
+		System.out.println("Child5 show..");
+		return 1;
+	}*/
 	public static void main(String[] args) {
 		Parent5 p=new Child5();
 		p.show();

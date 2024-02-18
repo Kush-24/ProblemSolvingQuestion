@@ -34,7 +34,7 @@ class Hello2 extends Thread{
 public class ThreadDemo2 {
 	// we need to throws bcz we are using hello2 method which throws exception
 	// if we use try-catch then we don't need to throws exception
-	// But we cant use throws with run() method.
+	// But we can't use throws with run() method.
 	public static void main(String[] args) throws InterruptedException {
 		Hi2 obj=new Hi2();
 		Hello2 obj2=new Hello2();

@@ -59,7 +59,7 @@ class SequenceGeneratorTask implements Runnable {
 
 
 public class SequenceNumberGeneratorTest {
-	private static final int TOTAL_NUMBER_IN_SEQUENCE = 10;
+	private static final int TOTAL_NUMBER_IN_SEQUENCE = 12;
 	private static final int TOTAL_NUMBER_OF_THREADS = 3;
 	
 	public static void main(String[] args) {

@@ -49,7 +49,7 @@ public class EqualsWithAl {
 		List<Student3> al = new ArrayList<>();
 		al.add(alex);
 		al.add(alex);
-		// al.add(alex); size =3 (AL can contain duplicate)
+		al.add(alex); //size =3 (AL can contain duplicate)
 
 		System.out.println("Arraylist size = " + al.size());
 		System.out.println("Hashcode of Alex "+alex.hashCode());
@@ -60,7 +60,9 @@ public class EqualsWithAl {
 		HashSet<Student3> students = new HashSet<>();
 		students.add(alex1);
 		students.add(alex2);
-		// students.add(alex1);
+		/*
+		 * If we will override the hashCode and equals then size will be 1 otherwise 2
+		 */
 
 		System.out.println("HashCode of alex1 & alex2 = " + alex1.hashCode() + " " + alex2.hashCode());
 		System.out.println("HashSet size = " + students.size());

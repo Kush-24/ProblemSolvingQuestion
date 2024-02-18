@@ -1,5 +1,11 @@
 package com.kush.serializable;
-//Serializable is marker interface used in java to give run time object info to jvm.
+/*//Serialization is marker interface used in java to give run time object info to JVM.
+ * 
+ *  Serialization in Java is the process of converting an object into a stream of bytes,
+ *  allowing the object to be saved to a file, sent over a network, or stored in a database.
+ *  This enables the object's state to be persisted or transferred across different execution 
+ *  environments.
+ */
 
 import java.io.FileInputStream;
 
@@ -64,7 +70,7 @@ public class SerializableClass {
 	public SerializableClass() {
 		list = new ArrayList<>();
 		list.add(new Student(1, "Kushagra", "akgec"));
-		list.add(new Student(2, "Sumit", "vit"));
+		list.add(new Student(2, "amit", "vit"));
 		list.add(new Student(3, "mukul", "nit"));
 
 	}

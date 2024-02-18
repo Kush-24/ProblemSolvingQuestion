@@ -12,13 +12,21 @@ class Account{
 	}
 	public synchronized void withdraw(int amount) {
 		System.out.println(Thread.currentThread());
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();}
+//		try {
+//			Thread.sleep(1000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();}
 		balance-=amount;
 		System.out.println(+amount+" Amount deducted from ur Account "+
 		                   ", Remaining balance : "+balance);
+	}
+	
+//this can make the issue as its not sync with object balance
+	public  void deposite(int amount) {
+		System.out.println(Thread.currentThread());
+		balance+=amount;
+		System.out.println(+amount+" Amount Added in ur Account "+
+		               ", Current balance : "+balance);
 	}
 }
 class C implements Runnable{
@@ -76,5 +84,16 @@ public class MoneyWithdrawproblem {
 		new Thread(new A(a,300)).start();
 		new Thread(new A(a,300)).start();
 		//  new Thread(c).start();
+		
+		Runnable r1=new Runnable() {
+			@Override
+			public void run() {
+				a.withdraw(300);
+				a.deposite(1000);
+				a.withdraw(1000);
+				a.deposite(300);
+			}
+		};
+		new Thread(r1).start();
 	}
 }

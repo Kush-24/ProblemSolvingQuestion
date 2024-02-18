@@ -7,7 +7,7 @@ import java.util.List;
 public class subset {
 
 	public static void main(String[] args) {
-		subset("abcd","");
+		subset("abcd","");//input & output 
 		subset2(new int[] {1,2,3},new ArrayList<>(),0);
 		subset3(new int[] {1,2,3},new ArrayList<>(),0);
 	}
@@ -42,10 +42,10 @@ public class subset {
 		return;
 		}
 		
-		subset3(arr,list,index+1);
+		subset3(arr,list,index+1); //don't take
 		list.add(arr[index]);
-		subset3(arr,list,index+1);
-		list.remove(list.size()-1);
+		subset3(arr,list,index+1); //take element
+		list.remove(list.size()-1); //backtrack
 	}
 	
 }

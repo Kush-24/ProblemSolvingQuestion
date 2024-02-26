@@ -27,6 +27,7 @@ class SubClass extends Parent2 {
 }
 
 public class OveridingExamples {
+	
 	public static void main(String[] args) {
 		try {
 			Parent2 p2 = new SubClass();

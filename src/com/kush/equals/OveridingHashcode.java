@@ -1,6 +1,8 @@
 package com.kush.equals;
 
- class Student1{
+import java.util.HashMap;
+
+class Student1{
 	private int id;
 	private String name;
 	public int getId() {
@@ -48,5 +50,14 @@ public class OveridingHashcode {
 		System.out.println(" s1 & s2  "+s1.hashCode()+" "+s2.hashCode());
 		
 		System.out.println("s1 & s2 equals or not :"+s1.equals(s2));
+		HashMap<Student1, Integer> map=new HashMap<>();
+		map.put(s1, 4);
+		map.put(s2,5);
+		System.out.println(map.size());
+		
+		map.put(s1, 4);
+		map.put(s2,5);
+		System.out.println(map.size());
+		
 	}	
 }

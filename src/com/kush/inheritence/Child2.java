@@ -3,8 +3,8 @@ package com.kush.inheritence;
 /* Why binding of static, final and private methods is always a static binding? 
      Static binding is better performance wise (no extra overhead is required).
      Compiler knows that all such methods cannot be overridden and will always be accessed by object of local class.
-      Hence compiler doesn’t have any difficulty to determine object of class (local class for sure).
-     That’s the reason binding for such methods is static.
+      Hence compiler doesn't have any difficulty to determine object of class (local class for sure).
+     Thatï¿½s the reason binding for such methods is static.
  */
 
 class Parent2{
